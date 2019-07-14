@@ -183,7 +183,7 @@
                     var description = (repoData.description) ? repoData.description : "";
                     var stargazers_url = repoData.stargazers_url;
 
-                    repoHtml += '<div class="col-sm-6">\
+                    repoHtml += '<div class="col-sm-6" draggable="true">\
             <div class="border"><span class="iconify" data-icon="octicon-repo" data-inline="false"></span><a class="repo-link" href="#">' + repoName+ '</a><i  class="fa size-col" style="cursor:grab;">&#xf0c9;</i><p>' + description + '</p>\
                 <p class="mb-0 f6 text-gray">\
                     <span class="d-inline-block mr-3">\
@@ -199,17 +199,17 @@
 		} else if (data == 'project') {
 			var projectUrl = url + "/projects/#list-user-projects";
 			projectResponse = ajaxCall(projectUrl, "GET", "json", "");
-			repoHtml = 'Project Tab';
+			repoHtml += '<div class="col-sm-6 tab-sec">project section</div>';
 		} else if (data == 'stars') {
 			var starredUrl = url + "/starred";
 			starredResponse = ajaxCall(starredUrl, "GET", "json", "");
-			repoHtml = 'Star Tab';
+			repoHtml += '<div class="col-sm-6 tab-sec">stared section</div>';
 		} else if (data == 'follow') {
 			repoResponse = ajaxCall(response.followers_url, "GET", "json", "");
-			repoHtml = 'Followers Tab';	
+			repoHtml += '<div class="col-sm-6 tab-sec">follow section</div>';	
 		}	else if (data == 'following') {
 			repoResponse = ajaxCall(response.following_url, "GET", "json", "");
-			repoHtml = 'Following Tab';
+			repoHtml += '<div class="col-sm-6 tab-sec">following section</div>';
 		}
 		$('#repoDataDiv').html(repoHtml);
 	}

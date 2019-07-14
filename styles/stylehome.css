@@ -83,6 +83,12 @@ a.active {
 .link-col{
 color:blue;
 }
+.tab-sec{
+	height:200px;
+	border:1px solid #dee2e6;
+	
+}
+
 a.active {
   border-bottom: 3px solid red;
 }
@@ -137,11 +143,10 @@ float:right;
 }
 
 .user-name {
-    color: #666;
-    font-size: 20px;
+    color: #24292e;
     font-style: normal;
-    font-weight: 300;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 24px
 }
 
 .btn-edit {
