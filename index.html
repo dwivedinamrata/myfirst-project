@@ -1,223 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title></title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://code.iconify.design/1/1.0.2/iconify.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-<link href="styles/stylehome.css" rel="stylehome" type="text/css">
-<style>
-.f6 {
-    font-size: 12px!important;
-	margin-top: 20px !important;
-}
-.d-inline-block {
-    display: inline-block!important;
-}
+    <head>
+        <title>My Profile</title>
+        <meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://code.iconify.design/1/1.0.2/iconify.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles/stylehome.css"  >
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
 
-.mr-3 {
-    margin-right: 16px!important;
-}
-.repo-language-color {
-    border-radius: 50%;
-    display: inline-block;
-    height: 12px;
-    position: relative;
-    top: 1px;
-    width: 12px;
-}
-.text-gray {
-    color: #586069!important;
-}
-.sectionnew{
-	width:50%;
-	margin-top:5px;
-}
-.button{
-    width: 50%;
+    	<div class="main">
+    		<div class="header">
+    			<nav style="background: #24292e ;height: 58px;"  class="navbar navbar-expand-md navbar-dark">
+					
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				  <a class="navbar-brand" href="#">
+			  		<img src="img/gitlogo.png" class="brand-logo" width="50">
+			  	  </a>
+				  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+				    <ul class="navbar-nav">
+				      <li class="nav-item">
+				      	<a class="nav-link">
+					      	 <input type="text" style="width:20rem;" class="input-header form-control-sm bg-dark" placeholder="Search or jump to ..." >
+						</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Pull requests</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Issues</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Marketplace</a>
+				      </li> 
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Explore</a>
+				      </li>    
+				    </ul>
+					<ul class="navbar-nav  ml-auto">
+					  <li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-bell"></i></a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="#"><img id="profileImageNav" style="border-radius:10px;" width="20"></a>
+					  </li>    
+					</ul>
+				  </div>  
+				</nav>
+    		</div>
+    		<div style="margin: 0;" class="row">
+
+    			<div class="col-md-4 mr-0 ml-4">
+
+    				<div class="profile-img m-4">
+    					<img id="profileImage" src="img/images.jpg" width="270" height="270" class="rounded" alt="Cinque Terre">
+                        <div class="below-img">
+                        	<i class="far fa-smile"></i> Set status
+                        </div>
+                        <div class="profile-name mt-3 mb-3">
+	    					<span class="user-name" id="profileName"></span>
+	    					<br>
+	    					<span class="user-name" id="profileUserName"></span>
+	    				</div>
+	    				<div class="edit-profile mt-4 mb-3">
+		                    <button type="button" class="form-control btn btn-edit">Edit Profile </button>
+		                    <div class="user-details mt-4">
+		                    	<div class="mb-2">
+		                    		<i class="fa fa-user" aria-hidden="true"></i> <span id="bio"></span>
+		                    	</div>
+								<div class="mb-2">
+									<i class="fa fa-map-marker" aria-hidden="true"></i> <span id="location"></span>
+								</div>		    
+		                        <div class="mb-2">
+		                        	<i class="fa fa-envelope" aria-hidden="true"></i> <span class="link-col" id="email"></span>
+		                        </div>
+		                        <div class="mb-2">
+		                        	<i class="fab fa-github" aria-hidden="true" ></i> <span class="link-col" id="blog"></span>
+		                        </div>
+		                    </div>
+	    				</div>
+    				</div>
+
+    			</div>
+
+    			<div class="col-md-8 margin-minus">
+
+    				<div class="nav-menu mt-3 mb-4">
+
+						 <ul class="nav nav-tabs hr-line">	
+		                    <li class="nav-item">
+		                        <a class="nav-link active" onclick="getData('overview')" data-toggle="tab" href="#overview" > Overview </a>
+		                    </li>
+		                    <li class="nav-item">
+		                        <a class="nav-link" onclick="getData('repos')" data-toggle="tab" href="#home">Repositiries <span class="Counter hide-lg hide-md hide-sm" id="repoCount"></span></a></a>
+
+		                    </li>
+		                    <li class="nav-item">
+		                        <a class="nav-link" onclick="getData('project')" data-toggle="tab" href="#home">Project <span class="Counter hide-lg hide-md hide-sm" id="projectCount"></span></a></a>
+		                    </li>
+		                    <li class="nav-item">
+		                        <a class="nav-link" onclick="getData('stars')" data-toggle="tab" href="#home">Stars <span class="Counter hide-lg hide-md hide-sm" id="starCount"></span></a></a>
+		                    </li>
+		                    <li class="nav-item">
+		                        <a class="nav-link" onclick="getData('follow')" data-toggle="tab" href="#home">Followers <span class="Counter hide-lg hide-md hide-sm" id="followersCount"></span></a></a>
+		                    </li>
+		                    <li class="nav-item">
+		                        <a class="nav-link" onclick="getData('following')" data-toggle="tab" href="#home">Following <span class="Counter hide-lg hide-md hide-sm" id="followingCount"></span></a></a>
+		                    </li> 
+                    	</ul> 
+						
+                    </div>
+
+        
+                    <div class="boxes mt-4">
+	                    <div class="">
+		                    <span>Pinned</span>
+		                    <span class="flot">Custmize your pins</span>
+	                    </div>
+	                    <div class="">
+	                        <div class="row" id="repoDataDiv">
+	                        </div>
+	                    </div>
+	                </div>
+
+    			</div>
+    		</div>
+    	</div>
   
-}
-a {
-    color: #202223;
-    text-decoration: none;
-}
-.maintain-top{
-margin-top:20px;
-}
-[class^="icon"] {
-    width: 15px;
-    height: 15px;
-    position: relative;
-    /* top: 15px; */
-    margin-right: 10px;
-    fill: #fff;
-}
+       
 
-/* Reposition the music note icon */
-.icon-music {
-  right: 2px;
-}
-.link-col{
-color:blue;
-}
-a.active {
-  border-bottom: 3px solid red;
-}
-.hr-line{
-	margin-top: 35px;
-    border-bottom: 1px solid #dee2e6;
-}
-.flot{
-float:right;
-}
-
-.border {
-    display: inline-block;
-    width: 100%;
-    height: 100px;
-    margin: 6px;
-	padding: 10px;
-}
-.border-img{
-	 border: 1px solid gray;
-}
-.below-img{
-height:50px;
-width:100%;
-border: 1px solid #e1e4e8!important;
-padding:15px;
-min-width: 50px;
-width: 72%;
-}
-</style>
-<body>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-4">
-      <div><img src="img/images.jpg" class="rounded maintain-top border-img" alt="Cinque Terre">
-	  <p class="below-img"><i class="far fa-smile"></i>  Set status</div>
-	  <Strong>Namrtaa Dwivedi</Strong>
-	  <p>NamrataDwivedi</p>
-	  <hr>
-	  <ul>
-		<li class="link-col"><a>Developer Program member</a></li>
-	</ul>
-	  <button type="button" class="button">Edit profile page</button>
-	 <section class="sectionnew">
-		Go,getter,payty Open source,
-		bangafrt hacker ,Wnnnat jet,
-		fggtrgtrhtg ggtghth
-		polit.
-	</section>
-	<div>
-	<div><i class="fa fa-map-marker" aria-hidden="true"></i><span>Bangalore , India</span></div>
-	<div><i class="fa fa-envelope" aria-hidden="true"></i><span class="link-col">namratadwivedi64@gmail.com</span></div>
-	<div><i class="fab fa-github" aria-hidden="true" ></></i><span class="link-col">http:///fvfbvjfvfv</span></div>
-	</div>
-	  
-    </div>
-    <div class="col-8">
+                   
+                    
+                                        </body>
+                                        </html>
+                                        <script type="text/javascript">
+    $(document).ready(function () {
+      loadProfileData();
+    });
 	
-		<ul class="nav hr-line">	
-		<li class="nav-item">
-			<a class="nav-link active" href="#" ><b>Overview</b></a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Repositiries <span class="badge">5</span></a></a>
+	 function ajaxCall(url, type, dataType, data) {
+        var responseData = {};
+        $.ajax({
+            url: url,
+            type: type,
+            dataType: dataType,
+            async: false,
+            data: data,
+//            headers: {
+//                "Authorization": "Bearer f078c9b2e53422a3695f253cdd3bad126cb78b53"
+//            },
+            success: function (responseJson) {
+                responseData = responseJson;
+            }
+        });
+        return responseData;
+    }
+	
+	
+	var repoResponse;
+	var projectResponse;
+	var starredResponse;
+	var repoHtml = "";
+	function getData(data) {
+		repoHtml = "";
+		if(data == 'repos' || data == 'overview') {
+			repoResponse = ajaxCall(response.repos_url, "GET", "json", "")
+			if (repoResponse.length > 0) {
+                $.each(repoResponse, function (srNo, repoData) {
+                    var repoName = repoData.name;
+                    var language = (repoData.language) ? repoData.language : "";
+                    var description = (repoData.description) ? repoData.description : "";
+                    var stargazers_url = repoData.stargazers_url;
+
+                    repoHtml += '<div class="col-sm-6">\
+            <div class="border"><span class="iconify" data-icon="octicon-repo" data-inline="false"></span><a class="repo-link" href="#">' + repoName+ '</a><i  class="fa size-col" style="cursor:grab;">&#xf0c9;</i><p>' + description + '</p>\
+                <p class="mb-0 f6 text-gray">\
+                    <span class="d-inline-block mr-3">\
+                        <span class="repo-language-color" style="background-color: #dc3545"></span>\
+                        <span itemprop="programmingLanguage">' + language + '</span>\
+                    </span>\
+                </p>\
+            </div>\
+        </div>';
+                });
+            }
 			
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Project <span class="badge">5</span></a></a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Stars <span class="badge">5</span></a></a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Followers <span class="badge">5</span></a></a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Following <span class="badge">5</span></a></a>
-		  </li>
-		</ul>
-		<br>
-		<br>
-		
-		<div><span>Pinned<span> <span class="flot">Custmize your pins<span></div>
-		<div class="">
-			  <div class="row">
-				<div class="col-sm-6">
-				  <div class="border"><span class="iconify" data-icon="octicon-repo" data-inline="false"></span><b class="link-col">ryyrtfyetfyetyfe</b><span class="pull-right"><i class="fas fa-bars"></i></span><p>hfhjfhegfe </p>
-							<p class="mb-0 f6 text-gray">
-							<span class="d-inline-block mr-3">
-							<span class="repo-language-color" style="background-color: #dc3545"></span>
-							<span itemprop="programmingLanguage">Java</span>
-							</span>
-							</p>
-				</div>
-				</div>
-				<div class="col-sm-6">
-				  <div class="border"><span class="iconify" data-icon="octicon-repo" data-inline="false"></span><b class="link-col">ryyrtfyetfyetyfe</b><span class="pull-right"><i class="fas fa-bars"></i></span><p>hfhjfhegfe</p>
-							<p class="mb-0 f6 text-gray">
-							<span class="d-inline-block mr-3">
-							<span class="repo-language-color" style="background-color: #ffc107"></span>
-							<span itemprop="programmingLanguage">Python</span>
-							</span>
-							</p>
-					</div>
-				</div>
-				<div class="col-sm-6">
-				  <div class="border"><span class="iconify" data-icon="octicon-repo" data-inline="false"></span><b class="link-col">ryyrtfyetfyetyfe</b><span class="pull-right"><i class="fas fa-bars"></i></span><p>hfhjfhegfe</p>
-						<p class="mb-0 f6 text-gray">
-							<span class="d-inline-block mr-3">
-							<span class="repo-language-color" style="background-color: #b07219"></span>
-							<span itemprop="programmingLanguage">Java</span>
-							</span>
-						</p>
-				  </div>
-				</div>
-				<div class="col-sm-6">
-				  <div class="border"><span class="iconify" data-icon="octicon-repo" data-inline="false"></span><b class="link-col">ryyrtfyetfyetyfe</b><span class="pull-right"><i class="fas fa-bars"></i></span><p>hfhjfhegfe</p>
-						<p class="mb-0 f6 text-gray">
-							<span class="d-inline-block mr-3">
-							<span class="repo-language-color" style="background-color: #17a2b8"></span>
-							<span itemprop="programmingLanguage">Java</span>
-							</span>
-						</p>
-				  </div>
-				</div>
-				<div class="col-sm-6">
-				  <div class="border"><span class="iconify" data-icon="octicon-repo" data-inline="false"></span><b class="link-col">ryyrtfyetfyetyfe</b><span class="pull-right"><i class="fas fa-bars"></i></span><p>hfhjfhegfe</p>
-						<p class="mb-0 f6 text-gray">
-							<span class="d-inline-block mr-3">
-							<span class="repo-language-color" style="background-color: #ffc107"></span>
-							<span itemprop="programmingLanguage">JavaScript</span>
-							</span>
-						</p>
-				  </div>
-				</div>
-				<div class="col-sm-6">
-				  <div class="border"><span class="iconify" data-icon="octicon-repo" data-inline="false"></span><b class="link-col">ryyrtfyetfyetyfe</b><span class="pull-right"><i class="fas fa-bars"></i></span><p>hfhjfhegfe</p>
-						<p class="mb-0 f6 text-gray">
-							<span class="d-inline-block mr-3">
-							<span class="repo-language-color" style="background-color: #17a2b8"></span>
-							<span itemprop="programmingLanguage">SQl</span>
-							</span>
-						</p>
-				  </div>
-				</div>
-			</div>
-			</div>
-    </div>
-  </div>
-</div>
-</body>
-</html>
+		} else if (data == 'project') {
+			var projectUrl = url + "/projects/#list-user-projects";
+			projectResponse = ajaxCall(projectUrl, "GET", "json", "");
+			repoHtml = 'Project Tab';
+		} else if (data == 'stars') {
+			var starredUrl = url + "/starred";
+			starredResponse = ajaxCall(starredUrl, "GET", "json", "");
+			repoHtml = 'Star Tab';
+		} else if (data == 'follow') {
+			repoResponse = ajaxCall(response.followers_url, "GET", "json", "");
+			repoHtml = 'Followers Tab';	
+		}	else if (data == 'following') {
+			repoResponse = ajaxCall(response.following_url, "GET", "json", "");
+			repoHtml = 'Following Tab';
+		}
+		$('#repoDataDiv').html(repoHtml);
+	}
+
+   
+	var response;
+	var loadedUserName;
+	var url;
+	var data;
+    function loadProfileData() {
+        loadedUserName = "dwivedinamrata";
+        url = "https://api.github.com/users/" + loadedUserName;
+        data = "";
+        response = ajaxCall(url, "GET", "json", data);
+		console.log(response);
+        if (response) {
+            var profilePic = response.avatar_url;
+            var profileName = (response.name) ? response.name : "";
+            var profileUserName = response.login;
+            var bio = response.bio;
+            var company = response.company;
+            var location = response.location;
+            var email = response.email;
+            var followers = response.followers;
+            var following = response.following;
+            var publicRepos = response.public_repos;
+            var blogUrl = response.blog;
+            var starCount = 0;
+            $("#profileImage").attr("src", profilePic);
+			$("#profileImageNav").attr("src", profilePic);
+            $("#profileName").html('<strong>' + profileName + '</strong>');
+            $("#profileUserName").html(profileUserName);
+            $("#bio").html(bio);
+            $("#company").html(company);
+            $("#location").html(location);
+            $("#email").html(email);
+            $("#blog").html(blogUrl);
+            $('#repoCount').html(publicRepos);
+            $("#followersCount").html(followers);
+            $("#followingCount").html(following);
+	
+			getData('stars');
+			<!-- getData('projects'); -->
+			getData('overview')
+            var starCount = starredResponse.length;
+            var projectCount = 0;
+            $("#projectCount").html(projectCount);
+            $("#starCount").html(starCount);
+        }
+    }
+</script>
